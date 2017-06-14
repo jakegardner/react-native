@@ -481,10 +481,10 @@ public class ReactTextInputManager extends BaseViewManager<ReactEditText, Layout
     // clear auto correct flags, set SUGGESTIONS or NO_SUGGESTIONS depending on value
     updateStagedInputTypeFlag(
         view,
-        InputType.TYPE_TEXT_FLAG_AUTO_CORRECT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS,
+        InputType.TYPE_TEXT_FLAG_AUTO_CORRECT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD,
         autoCorrect != null ?
             (autoCorrect.booleanValue() ?
-                InputType.TYPE_TEXT_FLAG_AUTO_CORRECT : InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
+                InputType.TYPE_TEXT_FLAG_AUTO_CORRECT : InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
             : 0);
   }
 
